@@ -1,0 +1,38 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fleekhq/fleek-storage-js": "^1.0.9",
+    "@walletconnect/web3-provider": "^1.4.1",
+    "@zoralabs/zdk": "^1.2.3",
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.5",
+    "ethereum-blockies-base64": "^1.0.2",
+    "ethers": "^5.4.0",
+    "formidable": "^1.2.2",
+    "graphql": "^15.5.1",
+    "graphql-request": "^3.4.0",
+    "next": "^11.0.1",
+    "nft.storage": "^3.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-dropzone": "^11.3.4",
+    "sass": "^1.35.1",
+    "unstated-next": "^1.1.0",
+    "uuid": "^8.3.2",
+    "web3modal": "^1.9.3"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
