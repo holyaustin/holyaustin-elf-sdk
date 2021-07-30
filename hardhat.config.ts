@@ -3,6 +3,7 @@ import "hardhat-typechain";
 import "hardhat-gas-reporter";
 
 import { HardhatUserConfig } from "hardhat/config";
+//import { ethers } from "ethers";
 
 const MAINNET_PROVIDER_URL = process.env.MAINNET_PROVIDER_URL || "";
 const GOERLI_PROVIDER_URL = process.env.GOERLI_PROVIDER_URL || "";
@@ -10,10 +11,19 @@ const PRIVATE_KEY =
   process.env.PRIVATE_KEY ||
   "0000000000000000000000000000000000000000000000000000000000000000";
 
+// task("accounts", "Prints list of accounts", async () => {
+//   const accounts = await ethers.getSigners();
+
+//   for(const account of accounts ){
+//     console.log(account.address);
+//   }
+// });
+
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
   solidity: {
     compilers: [
+      {version: '0.5.16'},
       {
         version: "0.7.1",
         settings: {
@@ -63,6 +73,11 @@ const config: HardhatUserConfig = {
     mainnet: {
       url: `${MAINNET_PROVIDER_URL}`,
       accounts: [`0x${PRIVATE_KEY}`],
+    },
+    hardhat: {
+      forking: {
+      url: `${MAINNET_PROVIDER_URL}`
+      },
     },
   },
 };

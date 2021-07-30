@@ -31,6 +31,9 @@ export default function Header() {
         {address ? (
           // If user is authenticated
           <>
+            <Link href={`/comp`}>
+              <a className={styles.header__menu_button_black}>Compound Yield</a>
+            </Link>
             <Link href={`/elf`}>
               <a className={styles.header__menu_button_black}>ELF Yield</a>
             </Link>
